@@ -52,5 +52,6 @@ fi
 echo "Running one-time setup..."
 chmod +x "$DOTFILES/semantic-branch.sh" 2>/dev/null || echo "Could not chmod semantic-branch.sh"
 git config --global core.excludesfile "$DOTFILES/gitignore_global"
-
+git config --global user.name "Siri"
+git config --global user.email "8502281+siri404@users.noreply.github.com"
 echo "Dotfiles setup check complete!"
