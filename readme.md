@@ -166,3 +166,8 @@ While the goal is a seamless experience, it's important to acknowledge and manag
 ## Conclusion: Your Personalized Development Ecosystem
 
 By meticulously crafting a development ecosystem that leverages a central dotfiles repository, the power of Dev Containers, and intelligent VS Code integration, you can achieve a truly harmonized and efficient developer experience. This approach not only ensures consistency and reproducibility across diverse environments—from your personal MacBook to cloud-based Ubuntu containers—but also empowers you with personalized tooling and configurations. The result is a more productive, less frustrating, and ultimately more enjoyable journey through the world of software development. This unified strategy allows you to abstract away environmental complexities, enabling you to focus on what truly matters: building great software.
+
+
+```
+[ -f "$HOME/.dotfiles/install.sh" ] && source "$HOME/.dotfiles/install.sh"
+```
