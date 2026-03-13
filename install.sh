@@ -42,6 +42,7 @@ fi
 
 # 3. Load variables from .env file if DOTENV_FILE is set and the file exists
 if [ -f "${DOTENV_FILE}" ]; then
+    echo "Setting environment variables from ${DOTENV_FILE}"
     set -a
         source "${DOTENV_FILE}"
     set +a
