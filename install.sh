@@ -40,7 +40,14 @@ else
     echo "Skipping Zsh-specific prompt (Current shell is not Zsh)."
 fi
 
-# 3. One-time setup
+# 3. Load variables from .env file if DOTENV_FILE is set and the file exists
+if [ -f "${DOTENV_FILE}" ]; then
+  set -a
+  source "${DOTENV_FILE}"
+  set +a
+fi
+
+# 4. One-time setup
 echo "Running one-time setup..."
 chmod +x "$DOTFILES/semantic-branch.sh" 2>/dev/null || echo "Could not chmod semantic-branch.sh"
 git config --global core.excludesfile "$DOTFILES/gitignore_global"
